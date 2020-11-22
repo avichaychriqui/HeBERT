@@ -8,6 +8,7 @@ We train a BERT model and tokenizer on OSCAR corpus, which is a huge multilingua
 We evalaute the model on emotion recognition (based on comments scarped from 3 big Israeli news-papaers sites we have annotated) and sentiment analysis (based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset), a downstream tasks and masked fill-in-the-blank task (the main task of our model).
 
 # Results
+|              |           |      |      |             |      |      |       |      |      |       |      |      |      |      |      |          |      |      |         |      |      |         |      |      |       |      |      |
 |:-------------|----------:|-----:|-----:|------------:|-----:|-----:|------:|-----:|-----:|------:|-----:|-----:|-----:|-----:|-----:|---------:|-----:|-----:|--------:|-----:|-----:|--------:|-----:|-----:|------:|-----:|-----:|
 | emotion\_en  | sentiment |      |      | expectation |      |      | happy |      |      | trust |      |      | fear |      |      | surprise |      |      | sadness |      |      | disgust |      |      | anger |      |      |
 | index        |         p |    r |   f1 |           p |    r |   f1 |     p |    r |   f1 |     p |    r |   f1 |    p |    r |   f1 |        p |    r |   f1 |       p |    r |   f1 |       p |    r |   f1 |     p |    r |   f1 |
