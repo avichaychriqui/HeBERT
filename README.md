@@ -1,9 +1,9 @@
 # HeBERT: Pre-training BERT for Polarity Analysis and Emotion Recognition
 HeBERT is a Hebrew pretrained language model based on Google's BERT architecture and it is BERT-Base config. <br>
 HeBert was trained on three dataset: 
-(1)	A Hebrew version of OSCAR: ~9.8 GB of data, including 1 billion words and over 20.8 millions sentences. 
-(2)	A Hebrew dump of Wikipedia: ~SIZE
-(3)	Emotion UGC data that was collected for the purpose of this study: ~SIZE (described below)
+1. A Hebrew version of OSCAR: ~9.8 GB of data, including 1 billion words and over 20.8 millions sentences. 
+2. A Hebrew dump of Wikipedia: ~SIZE
+3. Emotion UGC data that was collected for the purpose of this study: ~SIZE (described below)
 We evaluated the model on emotion recognition and sentiment analysis, for a downstream tasks and masked fill-in-the-blank task (the main task of our model). 
 
 ## Emotion UGC Data Description
