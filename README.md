@@ -22,6 +22,15 @@ We evalaute the model on emotion recognition and sentiment analysis (based on Am
 based on comments scarped from 3 big Israeli news-papaers sites we have annotated
 
 ## sentiment analysis
+| CNN          |           |        |          |   |   | HeBERT's     |           |        |          |   |
+|--------------|-----------|--------|----------|---|---|--------------|-----------|--------|----------|---|
+|              | precision | recall | f1-score |   |   |              | precision | recall | f1-score |   |
+| 0            | 0.92      | 0.95   | 0.94     |   |   | 0            | 0.94      |   0.95 | 0.95     |   |
+| 1            | 0.84      | 0.87   | 0.85     |   |   | 1            | 0.89      | 0.88   | 0.89     |   |
+| 2            | 1.00      | 0.01   | 0.03     |   |   | 2            | 0.73      | 0.56   | 0.63     |   |
+| accuracy     |           |        | 0.9      |   |   | accuracy     |           |        | 0.92     |   |
+| macro avg    | 0.92      | 0.61   | 0.61     |   |   | macro avg    | 0.85      | 0.80   | 0.82     |   |
+| weighted avg | 0.90      | 0.90   | 0.89     |   |   | weighted avg | 0.92      | 0.92   | 0.92     |   |
 
 
 # How to use
