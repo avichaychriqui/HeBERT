@@ -42,9 +42,9 @@ based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset
 ## How to use
 
 ## contact us
-Inbal yahav 
-Avichay Chriqui
-Coller's NLP Semitic languages lab
+Inbal yahav  <br>
+Avichay Chriqui <br>
+Coller's NLP Semitic languages lab <br>
 Thank you, תודה, شكرا
 
 ## If you used this model please cite us as :
