@@ -1,50 +1,45 @@
-# HeBERT: Pre-training BERT for modern Hebrew
-HeBERT is an Hebrew pretrained lanaguage model based on Google's BERT architechture and it's BERT-Base config. 
+# HeBERT: Pre-training BERT for Polarity Analysis and Emotion Recognition
+HeBERT is a Hebrew pretrained language model based on Google's BERT architecture and it is BERT-Base config. <br>
+HeBert was trained on three dataset: 
+(1)	A Hebrew version of OSCAR: ~9.8 GB of data, including 1 billion words and over 20.8 millions sentences. 
+(2)	A Hebrew dump of Wikipedia: ~SIZE
+(3)	Emotion UGC data that was collected for the purpose of this study: ~SIZE (described below)
+We evaluated the model on emotion recognition and sentiment analysis, for a downstream tasks and masked fill-in-the-blank task (the main task of our model). 
 
-BERT is a bidirectional model that is based on the transformer architecture, it replaces the sequential nature of RNN (LSTM & GRU) with a much faster Attention-based approach \cite{devlin2018bert}. ROBERTA builds on BERT and modifies key hyperparameters, and training with much larger mini-batches and learning rates \cite{liu2019roberta}. 
+## Emotion UGC Data Description
+Here: data collected – from 3 major news sites, between dates, data size
+XX sentences annotation by crowd members (3-10 annotators per sentence) for 8 emotions (list here) and overall sentiment/ polarity
+Percent of sentiment + each emotion in the labelled data
 
-We train a BERT model and tokenizer on OSCAR corpus, which is a huge multilingual corpus obtained by language classification and filtering of the Common Crawl corpus using the goclassy architecture. For Hebrew language it has 9.8 GB of corpus, including 1 billion words and over 20.8 millions sentences (after deduplicate the original data) (\cite{ortiz-suarez-etal-2020-monolingual}. We also train it on all user generated content we have and Hebrew Wikipedia's dump (630 MB, 3833141 sentences).
+## Performance
+### Emotion recognition
+Emotion	Precision	Recall 	F1 Score	Overall Accuracy
+				
+				
+				
 
-We evalaute the model on emotion recognition and sentiment analysis, for a downstream tasks and masked fill-in-the-blank task (the main task of our model).
-
-## TBD
-Our model is still building. Stay in touch!
-1. pre-proccess using YAP
-2. more corpus to train on
-3. fine-tuning with different down-stream tasks
-
-## Results
-### emotion recognition 
-| emotion_en   | sentiment |      |      | expectation |      |      | happy |      |      | trust |      |      | fear |      |      | surprise |      |      | sadness |      |      | disgust |      |      | anger |      |      |
-|--------------|-----------|------|------|-------------|------|------|-------|------|------|-------|------|------|------|------|------|----------|------|------|---------|------|------|---------|------|------|-------|------|------|
-| index        | p         | r    | f1   | p           | r    | f1   | p     | r    | f1   | p     | r    | f1   | p    | r    | f1   | p        | r    | f1   | p       | r    | f1   | p       | r    | f1   | p     | r    | f1   |
-| 0            | 0.96      | 0.93 | 0.94 | 0.85        | 0.81 | 0.83 | 0.98  | 0.98 | 0.98 | 0.96  | 0.99 | 0.97 | 0.77 | 0.84 | 0.81 | 0.84     | 0.89 | 0.86 | 0.71    | 0.70 | 0.70 | 0.73    | 0.79 | 0.76 | 0.88  | 0.88 | 0.88 |
-| 1            | 0.83      | 0.89 | 0.86 | 0.83        | 0.87 | 0.85 | 0.89  | 0.87 | 0.88 | 0.88  | 0.70 | 0.78 | 0.84 | 0.77 | 0.80 | 0.47     | 0.37 | 0.41 | 0.83    | 0.84 | 0.84 | 0.97    | 0.95 | 0.96 | 0.97  | 0.97 | 0.97 |
-| weighted avg | 0.92      | 0.92 | 0.92 | 0.84        | 0.84 | 0.84 | 0.97  | 0.97 | 0.97 | 0.95  | 0.95 | 0.95 | 0.81 | 0.80 | 0.80 | 0.76     | 0.78 | 0.77 | 0.79    | 0.79 | 0.79 | 0.93    | 0.93 | 0.93 | 0.95  | 0.95 | 0.95 |
-| accuracy     | 0.92      | 0.92 | 0.92 | 0.84        | 0.84 | 0.84 | 0.97  | 0.97 | 0.97 | 0.95  | 0.95 | 0.95 | 0.80 | 0.80 | 0.80 | 0.78     | 0.78 | 0.78 | 0.79    | 0.79 | 0.79 | 0.93    | 0.93 | 0.93 | 0.95  | 0.95 | 0.95 |
-
-
-based on comments scarped from 3 big Israeli news-papaers sites we have annotated
-
-### sentiment analysis
-| CNN          |           |        |          |   |   | HeBERT's     |           |        |          |   |
-|--------------|-----------|--------|----------|---|---|--------------|-----------|--------|----------|---|
-|              | precision | recall | f1-score |   |   |              | precision | recall | f1-score |   |
-| 0            | 0.92      | 0.95   | 0.94     |   |   | 0            | 0.94      |   0.95 | 0.95     |   |
-| 1            | 0.84      | 0.87   | 0.85     |   |   | 1            | 0.89      | 0.88   | 0.89     |   |
-| 2            | 1.00      | 0.01   | 0.03     |   |   | 2            | 0.73      | 0.56   | 0.63     |   |
-| accuracy     |           |        | 0.9      |   |   | accuracy     |           |        | 0.92     |   |
-| macro avg    | 0.92      | 0.61   | 0.61     |   |   | macro avg    | 0.85      | 0.80   | 0.82     |   |
-| weighted avg | 0.90      | 0.90   | 0.89     |   |   | weighted avg | 0.92      | 0.92   | 0.92     |   |
-
+### sentiment analysis  
+HeBERT's				
+	precision	recall	f1-score	
+0	0.94	0.95	0.95	
+1	0.89	0.88	0.89	
+2	0.73	0.56	0.63	
+accuracy			0.92	
+macro avg	0.85	0.80	0.82	
+weighted avg	0.92	0.92	0.92	
 based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset
 
 ## How to use
 
-## contact us
-Inbal yahav  <br>
+## Stay tuned!
+1.	Our model is still building. We will edit this page as we progress. 
+
+## Contact us
 Avichay Chriqui <br>
-Coller's NLP Semitic languages lab <br>
-Thank you, תודה, شكرا
+Inbal yahav <br>
+The Coller AI Lab <br>
+Thank you, תודה, شكرا <br>
 
 ## If you used this model please cite us as :
+TBD in a couple week :)
+
