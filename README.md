@@ -7,6 +7,12 @@ We train a BERT model and tokenizer on OSCAR corpus, which is a huge multilingua
 
 We evalaute the model on emotion recognition and sentiment analysis, for a downstream tasks and masked fill-in-the-blank task (the main task of our model).
 
+## TBD
+Our model is still building. Stay in touch!
+1. pre-proccess using YAP
+2. more corpus to train on
+3. fine-tuning with different down-stream tasks
+
 ## Results
 ### emotion recognition 
 | emotion_en   | sentiment |      |      | expectation |      |      | happy |      |      | trust |      |      | fear |      |      | surprise |      |      | sadness |      |      | disgust |      |      | anger |      |      |
@@ -34,5 +40,11 @@ based on comments scarped from 3 big Israeli news-papaers sites we have annotate
 based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset
 
 ## How to use
+
+## contact us
+Inbal yahav 
+Avichay Chriqui
+Coller's NLP Semitic languages lab
+Thank you, תודה, شكرا
 
 ## If you used this model please cite us as :
