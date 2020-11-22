@@ -35,4 +35,4 @@ based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset
 
 ## How to use
 
-### If you used this model please cite us as :
+## If you used this model please cite us as :
