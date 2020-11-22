@@ -7,8 +7,8 @@ We train a BERT model and tokenizer on OSCAR corpus, which is a huge multilingua
 
 We evalaute the model on emotion recognition and sentiment analysis, for a downstream tasks and masked fill-in-the-blank task (the main task of our model).
 
-# Results
-## emotion recognition 
+## Results
+### emotion recognition 
 | emotion_en   | sentiment |      |      | expectation |      |      | happy |      |      | trust |      |      | fear |      |      | surprise |      |      | sadness |      |      | disgust |      |      | anger |      |      |
 |--------------|-----------|------|------|-------------|------|------|-------|------|------|-------|------|------|------|------|------|----------|------|------|---------|------|------|---------|------|------|-------|------|------|
 | index        | p         | r    | f1   | p           | r    | f1   | p     | r    | f1   | p     | r    | f1   | p    | r    | f1   | p        | r    | f1   | p       | r    | f1   | p       | r    | f1   | p     | r    | f1   |
@@ -20,7 +20,7 @@ We evalaute the model on emotion recognition and sentiment analysis, for a downs
 
 based on comments scarped from 3 big Israeli news-papaers sites we have annotated
 
-## sentiment analysis
+### sentiment analysis
 | CNN          |           |        |          |   |   | HeBERT's     |           |        |          |   |
 |--------------|-----------|--------|----------|---|---|--------------|-----------|--------|----------|---|
 |              | precision | recall | f1-score |   |   |              | precision | recall | f1-score |   |
@@ -33,6 +33,6 @@ based on comments scarped from 3 big Israeli news-papaers sites we have annotate
 
 based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset
 
-# How to use
+## How to use
 
 ### If you used this model please cite us as :
