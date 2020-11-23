@@ -20,30 +20,46 @@ In order to valid the annotation, we search an agreement between raters to emoti
 
 ## Performance
 ### Emotion recognition
-Emotion	Precision	Recall 	F1 Score	Overall Accuracy
-				
+|             | f1   | precision | recall | accuracy |
+|-------------|------|-----------|--------|----------|
+| anger       | 0.97 | 0.97      | 0.97   | 0.95     |
+| disgust     | 0.96 | 0.97      | 0.95   | 0.93     |
+| expectation | 0.85 | 0.83      | 0.87   | 0.84     |
+| fear        | 0.8  | 0.84      | 0.77   | 0.8      |
+| happy       | 0.88 | 0.89      | 0.87   | 0.97     |
+| sadness     | 0.84 | 0.83      | 0.84   | 0.79     |
+| sentiment   | 0.86 | 0.83      | 0.89   | 0.92     |
+| surprise    | 0.41 | 0.47      | 0.37   | 0.78     |
+| trust       | 0.78 | 0.88      | 0.7    | 0.95     |
+<br>
+Metrics for possitive class (==emotion shown in text)
 				
 				
 
 ### sentiment analysis  
 HeBERT's				
-	precision	recall	f1-score	
-0	0.94	0.95	0.95	
-1	0.89	0.88	0.89	
-2	0.73	0.56	0.63	
-accuracy			0.92	
-macro avg	0.85	0.80	0.82	
-weighted avg	0.92	0.92	0.92	
+|              | precision | recall | f1-score |
+|--------------|-----------|--------|----------|
+| 0            | 0.94      | 0.95   | 0.95     |
+| 1            | 0.89      | 0.88   | 0.89     |
+| 2            | 0.73      | 0.56   | 0.63     |
+| accuracy     |           |        | 0.92     |
+| macro avg    | 0.85      | 0.8    | 0.82     |
+| weighted avg | 0.92      | 0.92   | 0.92     |
+<br>
 based on Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset
 
 ## How to use
+	from transformers import AutoTokenizer, AutoModel
+	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT")
+	model = AutoModel.from_pretrained("avichr/heBERT")
 
 ## Stay tuned!
-1.	Our model is still building. We will edit this page as we progress. 
+Our model is still building. We will edit this page as we progress. 
 
 ## Contact us
-Avichay Chriqui <br>
-Inbal yahav <br>
+Avichay Chriqui (avichayc@mail.tau.ac.il) <br>
+Inbal yahav (inbalyahav@tauex.tau.ac.il) <br>
 The Coller AI Lab <br>
 Thank you, תודה, شكرا <br>
 
