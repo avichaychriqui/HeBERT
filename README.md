@@ -57,8 +57,8 @@ based on [Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset](https://git
 Our model is still building. We will edit this page as we progress. 
 
 ## Contact us
-[Avichay Chriqui](mailto: avichayc@mail.tau.ac.il) <br>
-[Inbal yahav](mailto: inbalyahav@tauex.tau.ac.il) <br>
+[Avichay Chriqui](mailto:avichayc@mail.tau.ac.il) <br>
+[Inbal yahav](mailto:inbalyahav@tauex.tau.ac.il) <br>
 The Coller AI Lab <br>
 Thank you, תודה, شكرا <br>
 
