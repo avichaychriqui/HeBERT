@@ -36,8 +36,7 @@ Metrics for possitive class (==emotion shown in text)
 				
 				
 
-### sentiment analysis  
-HeBERT's				
+### sentiment analysis  				
 |              | precision | recall | f1-score |
 |--------------|-----------|--------|----------|
 | 0            | 0.94      | 0.95   | 0.95     |
@@ -46,6 +45,7 @@ HeBERT's
 | accuracy     |           |        | 0.92     |
 | macro avg    | 0.85      | 0.8    | 0.82     |
 | weighted avg | 0.92      | 0.92   | 0.92     |
+
 based on [Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset](https://github.com/omilab/Neural-Sentiment-Analyzer-for-Modern-Hebrew)
 
 ## How to use
