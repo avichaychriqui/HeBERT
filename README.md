@@ -15,22 +15,22 @@ In order to valid the annotation, we search an agreement between raters to emoti
 
 |       | anger | disgust | expectation | fear | happy | sadness | surprise | trust | sentiment |
 |------:|------:|--------:|------------:|-----:|------:|--------:|---------:|------:|-----------|
-| count |  1979 |    2115 |         681 | 1041 |  2342 |     998 |      698 |  1956 | 2049      |
-| ratio |  0.78 |    0.83 |        0.58 | 0.45 |  0.12 |    0.59 |     0.17 |  0.11 | 0.25      |
+| **count** |  1979 |    2115 |         681 | 1041 |  2342 |     998 |      698 |  1956 | 2049      |
+| **ratio** |  0.78 |    0.83 |        0.58 | 0.45 |  0.12 |    0.59 |     0.17 |  0.11 | 0.25      |
 
 ## Performance
 ### Emotion recognition
 |             | f1   | precision | recall | accuracy |
 |-------------|------|-----------|--------|----------|
-| anger       | 0.97 | 0.97      | 0.97   | 0.95     |
-| disgust     | 0.96 | 0.97      | 0.95   | 0.93     |
-| expectation | 0.85 | 0.83      | 0.87   | 0.84     |
-| fear        | 0.8  | 0.84      | 0.77   | 0.8      |
-| happy       | 0.88 | 0.89      | 0.87   | 0.97     |
-| sadness     | 0.84 | 0.83      | 0.84   | 0.79     |
-| sentiment   | 0.86 | 0.83      | 0.89   | 0.92     |
-| surprise    | 0.41 | 0.47      | 0.37   | 0.78     |
-| trust       | 0.78 | 0.88      | 0.7    | 0.95     |
+| **anger**       | 0.97 | 0.97      | 0.97   | 0.95     |
+| **disgust**     | 0.96 | 0.97      | 0.95   | 0.93     |
+| **expectation** | 0.85 | 0.83      | 0.87   | 0.84     |
+| **fear**        | 0.8  | 0.84      | 0.77   | 0.8      |
+| **happy**       | 0.88 | 0.89      | 0.87   | 0.97     |
+| **sadness**     | 0.84 | 0.83      | 0.84   | 0.79     |
+| **sentiment**   | 0.86 | 0.83      | 0.89   | 0.92     |
+| **surprise**    | 0.41 | 0.47      | 0.37   | 0.78     |
+| **trust**       | 0.78 | 0.88      | 0.7    | 0.95     |
 
 Metrics for possitive class (==emotion shown in text)
 				
