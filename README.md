@@ -49,9 +49,16 @@ Metrics for possitive class (==emotion shown in text)
 based on [Amram, A., Ben-David, A., and Tsarfaty, R. (2018) dataset](https://github.com/omilab/Neural-Sentiment-Analyzer-for-Modern-Hebrew)
 
 ## How to use
+	# For masked-LM model (can be fine-tunned to any down-stream task)
 	from transformers import AutoTokenizer, AutoModel
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT")
 	model = AutoModel.from_pretrained("avichr/heBERT")
+	
+	# For sentiment classification model:
+	from transformers import AutoTokenizer, AutoModel
+	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT")
+	model = AutoModel.from_pretrained("avichr/heBERT_UGC_sentiment_analysis")
+
 
 ## Stay tuned!
 Our model is still building. We will edit this page as we progress. 
