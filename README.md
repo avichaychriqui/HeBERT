@@ -9,9 +9,14 @@ We evaluated the model on emotion recognition and sentiment analysis, for a down
 
 ## Emotion UGC Data Description
 Our User Genrated Content (UGC) is comments written on articles collected from 3 major news sites, between January 2020 to August 2020,. Total data size ~150 MB of data, including over 7 millions words and 350K sentences.
-XX sentences annotation by crowd members (3-10 annotators per sentence) for 8 emotions (list here) and overall sentiment/ polarity
-Percent of sentiment + each emotion in the labelled data
+4000 sentences annotated by crowd members (3-10 annotators per sentence) for 8 emotions (anger, disgust, expectation , fear, happy, sadness, surprise and trust) and overall sentiment / polarity<br>
+In order to valid the annotation, we search an agreement between raters to emotion in each sentence using krippendorff's alpha (\cite{krippendorff1970estimating}). We left sentences that got alpha > 0.7. Note that while we found a general agreement between raters about emotion like happy, trust and disgust, there are few emotion with general disagreement about them, apparently given the complexity of finding them in the text (e.g. expectation and surprise).
 
+
+|       | anger | disgust | expectation | fear | happy | sadness | surprise | trust | sentiment |
+|------:|------:|--------:|------------:|-----:|------:|--------:|---------:|------:|-----------|
+| count |  1979 |    2115 |         681 | 1041 |  2342 |     998 |      698 |  1956 | 2049      |
+| ratio |  0.78 |    0.83 |        0.58 | 0.45 |  0.12 |    0.59 |     0.17 |  0.11 | 0.25      |
 
 ## Performance
 ### Emotion recognition
