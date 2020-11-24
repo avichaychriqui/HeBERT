@@ -63,5 +63,5 @@ The Coller Semitic Languages AI Lab <br>
 Thank you, תודה, شكرا <br>
 
 ## If you used this model please cite us as :
-TBD in a couple week :)
+TBD in a couple weeks :)
 
