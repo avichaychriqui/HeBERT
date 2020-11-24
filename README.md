@@ -51,6 +51,17 @@ The percentage of sentences in which each emotion appeared is found in the table
 	model = AutoModel.from_pretrained("avichr/heBERT_UGC_sentiment_analysis")
 	
 	# how to use?
+	sentiment_analysis = pipeline(
+	    "sentiment-analysis",
+	    model="avichr/heBERT_sentiment_analysis",
+	    tokenizer="avichr/heBERT_sentiment_analysis"
+	)
+	sentiment_analysis('אוהב את העולם')
+	# [{'label': 'LABEL_1', 'score': 0.999920666217804}]
+	sentiment_analysis('שונא את העולם')
+	# [{'label': 'LABEL_0', 'score': 0.9997172951698303}]
+
+	
 
 
 ## Stay tuned!
