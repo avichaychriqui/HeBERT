@@ -54,7 +54,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 
 
 ## Stay tuned!
-Our model is still building. We will edit this page as we progress. 
+We are still working on our model and will edit this page as we progress. 
 
 ## Contact us
 [Avichay Chriqui](mailto:avichayc@mail.tau.ac.il) <br>
