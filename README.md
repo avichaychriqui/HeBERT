@@ -32,7 +32,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 *The above metrics for possitive class (==emotion shown in text).*
 
 ## How to use
-	# For masked-LM model (can be fine-tunned to any down-stream task)
+### For masked-LM model (can be fine-tunned to any down-stream task)
 	from transformers import AutoTokenizer, AutoModel
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT")
 	model = AutoModel.from_pretrained("avichr/heBERT")
@@ -45,7 +45,28 @@ The percentage of sentences in which each emotion appeared is found in the table
 	)
 	fill_mask("הקורונה לקחה את [MASK] ולנו לא נשאר דבר.")
 	
-	# For sentiment classification model (polarity ONLY):
+	# [{'score': 0.04019876569509506,
+	#   'sequence': '[CLS] הקורונה לקחה את הכל ולנו לא נשאר דבר. [SEP]',
+	#   'token': 1984,
+	#   'token_str': 'הכל'},
+	#  {'score': 0.034434083849191666,
+	#   'sequence': '[CLS] הקורונה לקחה את זה ולנו לא נשאר דבר. [SEP]',
+	#   'token': 1592,
+	#   'token_str': 'זה'},
+	#  {'score': 0.033179089426994324,
+	#   'sequence': '[CLS] הקורונה לקחה את המקום ולנו לא נשאר דבר. [SEP]',
+	#   'token': 3252,
+	#   'token_str': 'המקום'},
+	#  {'score': 0.027762459591031075,
+	#   'sequence': '[CLS] הקורונה לקחה את הבית ולנו לא נשאר דבר. [SEP]',
+	#   'token': 2508,
+	#   'token_str': 'הבית'},
+	#  {'score': 0.021265845745801926,
+	#   'sequence': '[CLS] הקורונה לקחה את הילדים ולנו לא נשאר דבר. [SEP]',
+	#   'token': 3036,
+	#   'token_str': 'הילדים'}]
+
+### For sentiment classification model (polarity ONLY):
 	from transformers import AutoTokenizer, AutoModel
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT_UGC_sentiment_analysis") #same as 'avichr/heBERT' tokenizer
 	model = AutoModel.from_pretrained("avichr/heBERT_UGC_sentiment_analysis")
