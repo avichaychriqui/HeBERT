@@ -44,27 +44,6 @@ The percentage of sentences in which each emotion appeared is found in the table
 	    tokenizer="avichr/heBERT"
 	)
 	fill_mask("הקורונה לקחה את [MASK] ולנו לא נשאר דבר.")
-	
-	# [{'score': 0.04019876569509506,
-	#   'sequence': '[CLS] הקורונה לקחה את הכל ולנו לא נשאר דבר. [SEP]',
-	#   'token': 1984,
-	#   'token_str': 'הכל'},
-	#  {'score': 0.034434083849191666,
-	#   'sequence': '[CLS] הקורונה לקחה את זה ולנו לא נשאר דבר. [SEP]',
-	#   'token': 1592,
-	#   'token_str': 'זה'},
-	#  {'score': 0.033179089426994324,
-	#   'sequence': '[CLS] הקורונה לקחה את המקום ולנו לא נשאר דבר. [SEP]',
-	#   'token': 3252,
-	#   'token_str': 'המקום'},
-	#  {'score': 0.027762459591031075,
-	#   'sequence': '[CLS] הקורונה לקחה את הבית ולנו לא נשאר דבר. [SEP]',
-	#   'token': 2508,
-	#   'token_str': 'הבית'},
-	#  {'score': 0.021265845745801926,
-	#   'sequence': '[CLS] הקורונה לקחה את הילדים ולנו לא נשאר דבר. [SEP]',
-	#   'token': 3036,
-	#   'token_str': 'הילדים'}]
 
 ### For sentiment classification model (polarity ONLY):
 	from transformers import AutoTokenizer, AutoModel
@@ -78,9 +57,9 @@ The percentage of sentences in which each emotion appeared is found in the table
 	    tokenizer="avichr/heBERT_sentiment_analysis"
 	)
 	sentiment_analysis('אוהב את העולם')
-	# [{'label': 'LABEL_1', 'score': 0.999920666217804}]
+	>>>  [{'label': 'LABEL_1', 'score': 0.999920666217804}]
 	sentiment_analysis('שונא את העולם')
-	# [{'label': 'LABEL_0', 'score': 0.9997172951698303}]
+	>>>  [{'label': 'LABEL_0', 'score': 0.9997172951698303}]
 
 	
 
