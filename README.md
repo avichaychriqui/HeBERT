@@ -3,7 +3,7 @@ HeBERT is a Hebrew pretrained language model. It is based on [Google's BERT](htt
 
 HeBert was trained on three dataset: 
 1. A Hebrew version of [OSCAR](https://oscar-corpus.com/): ~9.8 GB of data, including 1 billion words and over 20.8 millions sentences. 
-2. A Hebrew dump of Wikipedia: ~650 MB of data, including over 63 millions words and 3.8 millions sentences
+2. A Hebrew dump of [Wikipedia](https://dumps.wikimedia.org/): ~650 MB of data, including over 63 millions words and 3.8 millions sentences
 3. Emotion User Generated Content (UGC) data that was collected for the purpose of this study (described below).<br>
 We evaluated the model on downstream tasks: emotions recognition and sentiment analysis. 
 
@@ -45,7 +45,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 	)
 	fill_mask("הקורונה לקחה את [MASK] ולנו לא נשאר דבר.")
 	
-	# For sentiment classification model:
+	# For sentiment classification model (polarity ONLY):
 	from transformers import AutoTokenizer, AutoModel
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT_UGC_sentiment_analysis") #same as 'avichr/heBERT' tokenizer
 	model = AutoModel.from_pretrained("avichr/heBERT_UGC_sentiment_analysis")
@@ -54,7 +54,8 @@ The percentage of sentences in which each emotion appeared is found in the table
 
 
 ## Stay tuned!
-We are still working on our model and will edit this page as we progress. 
+We are still working on our model and will edit this page as we progress. <br>
+Note that we have released only sentiment analysis (polarity) at this point, emotion detection will be released later on.
 
 ## Contact us
 [Avichay Chriqui](mailto:avichayc@mail.tau.ac.il) <br>
