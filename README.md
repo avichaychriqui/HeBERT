@@ -47,7 +47,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 	fill_mask("הקורונה לקחה את [MASK] ולנו לא נשאר דבר.")
 
 ### For sentiment classification model (polarity ONLY):
-	from transformers import AutoTokenizer, AutoModel
+	from transformers import AutoTokenizer, AutoModel, pipeline
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT_sentiment_analysis") #same as 'avichr/heBERT' tokenizer
 	model = AutoModel.from_pretrained("avichr/heBERT_sentiment_analysis")
 	
