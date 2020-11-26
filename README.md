@@ -18,6 +18,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 | **ratio** |  0.78 |    0.83 |        0.58 | 0.45 |  0.12 |    0.59 |     0.17 |  0.11 | 0.25      |
 
 ## Performance
+### Emotion Recognition
 |             | f1   | precision | recall | accuracy |
 |-------------|------|-----------|--------|----------|
 | **polarity**   | 0.86 | 0.83      | 0.89   | 0.92     |
@@ -31,6 +32,15 @@ The percentage of sentences in which each emotion appeared is found in the table
 | **trust**       | 0.78 | 0.88      | 0.7    | 0.95     |
 
 *The above metrics for possitive class (==emotion shown in text).*
+
+### Sentiment (Polarity) Analysis
+|              | precision | recall | f1-score |
+|--------------|-----------|--------|----------|
+| 0            | 0.96      | 0.94   | 0.95     |
+| 1            | 0.84      | 0.89   | 0.86     |
+| accuracy     |           |        | 0.92     |
+| macro avg    | 0.90      | 0.91   | 0.90     |
+| weighted avg | 0.93      | 0.92   | 0.92     |
 
 ## How to use
 ### For masked-LM model (can be fine-tunned to any down-stream task)
