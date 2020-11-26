@@ -48,8 +48,8 @@ The percentage of sentences in which each emotion appeared is found in the table
 
 ### For sentiment classification model (polarity ONLY):
 	from transformers import AutoTokenizer, AutoModel
-	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT_UGC_sentiment_analysis") #same as 'avichr/heBERT' tokenizer
-	model = AutoModel.from_pretrained("avichr/heBERT_UGC_sentiment_analysis")
+	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT_sentiment_analysis") #same as 'avichr/heBERT' tokenizer
+	model = AutoModel.from_pretrained("avichr/heBERT_sentiment_analysis")
 	
 	# how to use?
 	sentiment_analysis = pipeline(
