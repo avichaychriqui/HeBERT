@@ -31,7 +31,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 | **surprise**    | 0.41 | 0.47      | 0.37   | 0.78     |
 | **trust**       | 0.78 | 0.88      | 0.7    | 0.95     |
 
-*The above metrics for possitive class (==emotion shown in text).*
+*The above metrics for positive class (==emotion shown in text).*
 
 ### Sentiment (Polarity) Analysis
 |              | precision | recall | f1-score |
