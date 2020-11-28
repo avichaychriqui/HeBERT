@@ -66,12 +66,18 @@ The percentage of sentences in which each emotion appeared is found in the table
 	sentiment_analysis = pipeline(
 	    "sentiment-analysis",
 	    model="avichr/heBERT_sentiment_analysis",
-	    tokenizer="avichr/heBERT_sentiment_analysis"
+	    tokenizer="avichr/heBERT_sentiment_analysis",
+	    return_all_scores = True
 	)
 	sentiment_analysis('אוהב את העולם')
-	>>>  [{'label': 'LABEL_1', 'score': 0.999920666217804}]
+	>>>  [[{'label': 'natural', 'score': 0.012534416280686855},
+	>>>  {'label': 'possitive', 'score': 0.9817855358123779},
+	>>>  {'label': 'negetive', 'score': 0.005680042784661055}]]
+
 	sentiment_analysis('שונא את העולם')
-	>>>  [{'label': 'LABEL_0', 'score': 0.9997172951698303}]
+	>>>  [[{'label': 'natural', 'score': 0.045369576662778854},
+  	>>>  {'label': 'possitive', 'score': 0.1223575621843338},
+  	>>>  {'label': 'negetive', 'score': 0.8322728872299194}]]
 
 	
 
