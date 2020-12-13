@@ -35,14 +35,14 @@ The percentage of sentences in which each emotion appeared is found in the table
 *The above metrics for positive class (meaning, the emotion is reflected in text).*
 
 ### Sentiment (Polarity) Analysis
-|              | precision | recall | f1-score |
-|--------------|-----------|--------|----------|
-| 0 (natural)  | 0.86      | 0.67   | 0.75     |
-| 1 (positive) | 0.88      | 0.92   | 0.90     |
-| 2 (negative) | 0.98      | 0.98   | 0.98     |
-| accuracy     |           |        | 0.96     |
-| macro avg    | 0.91      | 0.86   | 0.88     |
-| weighted avg | 0.96      | 0.96   | 0.96     |
+|              | precision | recall | f1-score | support |
+|--------------|-----------|--------|----------|---------|
+| natural      | 0.83      | 0.56   | 0.67     | 9       |
+| positive     | 0.96      | 0.92   | 0.94     | 25      |
+| negative     | 0.97      | 0.99   | 0.98     | 200     |
+| accuracy     |           |        | 0.97     | 234     |
+| macro avg    | 0.92      | 0.82   | 0.86     | 234     |
+| weighted avg | 0.96      | 0.97   | 0.96     | 234     |
 
 ## How to use
 ### For masked-LM model (can be fine-tunned to any down-stream task)
