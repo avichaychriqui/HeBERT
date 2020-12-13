@@ -4,7 +4,7 @@ HeBERT is a Hebrew pretrained language model. It is based on [Google's BERT](htt
 HeBert was trained on three dataset: 
 1. A Hebrew version of [OSCAR](https://oscar-corpus.com/): ~9.8 GB of data, including 1 billion words and over 20.8 millions sentences. 
 2. A Hebrew dump of [Wikipedia](https://dumps.wikimedia.org/): ~650 MB of data, including over 63 millions words and 3.8 millions sentences
-3. ~~Emotion User Generated Content (UGC) data that was collected for the purpose of this study (described below).
+3. Emotion User Generated Content (UGC) data that was collected for the purpose of this study (described below).
 <br>
 <div>
 We evaluated the model on downstream tasks: emotions recognition and sentiment analysis. 
