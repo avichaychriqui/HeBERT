@@ -70,15 +70,21 @@ The percentage of sentences in which each emotion appeared is found in the table
 	    tokenizer="avichr/heBERT_sentiment_analysis",
 	    return_all_scores = True
 	)
-	sentiment_analysis('אוהב את העולם')
-	>>>  [[{'label': 'natural', 'score': 0.012534416280686855},
-	>>>  {'label': 'possitive', 'score': 0.9817855358123779},
-	>>>  {'label': 'negetive', 'score': 0.005680042784661055}]]
+	
+	sentiment_analysis('אני מתלבט מה לאכול לארוחת צהריים')	
+	>>>  [[{'label': 'natural', 'score': 0.9978172183036804},
+	>>>  {'label': 'possitive', 'score': 0.0014792329166084528},
+	>>>  {'label': 'negetive', 'score': 0.0007035882445052266}]]
 
-	sentiment_analysis('שונא את העולם')
-	>>>  [[{'label': 'natural', 'score': 0.045369576662778854},
-  	>>>  {'label': 'possitive', 'score': 0.1223575621843338},
-  	>>>  {'label': 'negetive', 'score': 0.8322728872299194}]]
+	sentiment_analysis('קפה זה טעים')
+	>>>  [[{'label': 'natural', 'score': 0.00047328314394690096},
+	>>>  {'label': 'possitive', 'score': 0.9994067549705505},
+	>>>  {'label': 'negetive', 'score': 0.00011996887042187154}]]
+
+	sentiment_analysis('אני לא אוהב את העולם')
+	>>>  [[{'label': 'natural', 'score': 9.214012970915064e-05}, 
+	>>>  {'label': 'possitive', 'score': 8.876807987689972e-05}, 
+	>>>  {'label': 'negetive', 'score': 0.9998190999031067}]]
 
 	
 
