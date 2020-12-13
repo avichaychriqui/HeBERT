@@ -22,15 +22,15 @@ The percentage of sentences in which each emotion appeared is found in the table
 ### Emotion Recognition
 | emotion     | f1-score | precision | recall   |
 |-------------|----------|-----------|----------|
-|       anger | 0.956962 |  0.989529 | 0.926471 |
-|     disgust | 0.969565 |  0.978070 | 0.961207 |
-| expectation | 0.829787 |  0.795918 | 0.866667 |
-|        fear | 0.793651 |  0.877193 | 0.724638 |
-|       happy | 0.901408 |  0.969697 | 0.842105 |
-|     sadness | 0.900585 |  0.865169 | 0.939024 |
-|   sentiment | 0.884058 |  0.897059 | 0.871429 |
-|    surprise | 0.400000 |  0.437500 | 0.368421 |
-|       trust | 0.827586 |  0.857143 | 0.800000 |
+|       anger | 0.96 |  0.99 | 0.93 |
+|     disgust | 0.97 |  0.98 | 0.96 |
+| expectation | 0.82 |  0.80 | 0.87 |
+|        fear | 0.79 |  0.88 | 0.72 |
+|       happy | 0.90 |  0.97 | 0.84 |
+|     sadness | 0.90 |  0.86 | 0.94 |
+|   sentiment | 0.88 |  0.90 | 0.87 |
+|    surprise | 0.40 |  0.44 | 0.37 |
+|       trust | 0.83 |  0.86 | 0.80 |
 
 *The above metrics for positive class (meaning, the emotion is reflected in text).*
 
