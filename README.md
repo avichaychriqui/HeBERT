@@ -73,8 +73,8 @@ The percentage of sentences in which each emotion appeared is found in the table
 	
 	sentiment_analysis('אני מתלבט מה לאכול לארוחת צהריים')	
 	>>>  [[{'label': 'natural', 'score': 0.9978172183036804},
-	>>>  {'label': 'possitive', 'score': 0.0014792329166084528},
-	>>>  {'label': 'negetive', 'score': 0.0007035882445052266}]]
+	>>>  {'label': 'positive', 'score': 0.0014792329166084528},
+	>>>  {'label': 'negative', 'score': 0.0007035882445052266}]]
 
 	sentiment_analysis('קפה זה טעים')
 	>>>  [[{'label': 'natural', 'score': 0.00047328314394690096},
