@@ -100,5 +100,12 @@ The Coller Semitic Languages AI Lab <br>
 Thank you, תודה, شكرا <br>
 
 ## If you used this model please cite us as :
-TBD in a couple weeks :)
-
+Chriqui, A., & Yahav, I. (2021). HeBERT & HebEMO: a Hebrew BERT Model and a Tool for Polarity Analysis and Emotion Recognition. arXiv preprint arXiv:2102.01909.
+```
+@article{chriqui2021hebert,
+  title={HeBERT \& HebEMO: a Hebrew BERT Model and a Tool for Polarity Analysis and Emotion Recognition},
+  author={Chriqui, Avihay and Yahav, Inbal},
+  journal={arXiv preprint arXiv:2102.01909},
+  year={2021}
+}
+```
