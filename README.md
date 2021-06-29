@@ -87,7 +87,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 	>>>  {'label': 'negetive', 'score': 0.9998190999031067}]]
 
 	
-
+Our model is also available on AWS! for more information visit [AWS' git](https://github.com/aws-samples/aws-lambda-docker-serverless-inference/tree/main/hebert-sentiment-analysis-inference-docker-lambda)
 
 ## Stay tuned!
 We are still working on our model and will edit this page as we progress. <br>
