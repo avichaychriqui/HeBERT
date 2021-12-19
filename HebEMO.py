@@ -64,7 +64,7 @@ class HebEMO:
                 hebEMO[emo] = abs(hebEMO_df[emo]-(1-hebEMO_df['confidence_'+emo]))
             for i in range(0,1):    
                 try: ax = plutchik(hebEMO.to_dict(orient='records')[i])
-                except: ax = spider_plot(hebEMO)
+                except: ax = spider_plot(hebEMO); print('we recommend installing pyplutchik library for better visualization')
                 print(hebEMO_df[0][i])
                 plt.show()
             return (hebEMO_df[0][i], ax)
