@@ -20,8 +20,8 @@ class HebEMO:
         text (str): a text or list of text to analyze
         input_path(str): the path to the text file (txt file, each row for different instance)
         '''
-        from pyplutchik import plutchik
-        from spider_plot import spider_plot
+        try: from pyplutchik import plutchik
+        except: from spider_plot import spider_plot
         
         import matplotlib.pyplot as plt
         import pandas as pd
