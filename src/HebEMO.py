@@ -20,9 +20,7 @@ class HebEMO:
         text (str): a text or list of text to analyze
         input_path(str): the path to the text file (txt file, each row for different instance)
         '''
-        try: from pyplutchik import plutchik
-        except: import spider_plot
-        
+        from pyplutchik import plutchik
         import matplotlib.pyplot as plt
         import pandas as pd
         import time
@@ -63,8 +61,7 @@ class HebEMO:
             for emo in hebEMO_df.columns[1::2]:
                 hebEMO[emo] = abs(hebEMO_df[emo]-(1-hebEMO_df['confidence_'+emo]))
             for i in range(0,1):    
-                try: ax = plutchik(hebEMO.to_dict(orient='records')[i])
-                except: ax = spider_plot.spider_plot(hebEMO); print('we recommend installing pyplutchik library for better visualization')
+                ax = plutchik(hebEMO.to_dict(orient='records')[i])
                 print(hebEMO_df[0][i])
                 plt.show()
             return (hebEMO_df[0][i], ax)
