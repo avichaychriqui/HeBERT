@@ -1,4 +1,6 @@
 # HeBERT: Pre-trained BERT for Polarity Analysis and Emotion Recognition
+<img align="right" src="https://github.com/avichaychriqui/HeBERT/blob/main/data/heBERT_logo.png?raw=true" width="250">
+
 HeBERT is a Hebrew pretrained language model. It is based on [Google's BERT](https://arxiv.org/abs/1810.04805) architecture and it is BERT-Base config. <br>
 
 HeBert was trained on three dataset: 
@@ -45,6 +47,25 @@ The percentage of sentences in which each emotion appeared is found in the table
 | weighted avg | 0.96      | 0.97   | 0.96     |
 
 ## How to use
+### For Emotion Recognition Model
+An online model can be found at [huggingface spaces](https://huggingface.co/spaces/avichr/HebEMO_demo) or as [colab notebook](https://colab.research.google.com/drive/1Jw3gOWjwVMcZslu-ttXoNeD17lms1-ff?usp=sharing)
+```
+# !pip install pyplutchik==0.0.7
+# !pip install transformers==4.14.1
+
+!git clone https://github.com/avichaychriqui/HeBERT.git
+from HeBERT.src.HebEMO import *
+HebEMO_model = HebEMO()
+
+HebEMO_model.hebemo(input_path = 'data/text_example.txt')
+# return analyzed pandas.DataFrame  
+
+hebEMO_df = HebEMO_model.hebemo(text='החיים יפים ומאושרים', plot=True)
+```
+<img src="https://github.com/avichaychriqui/HeBERT/blob/main/data/hebEMO1.png?raw=true" width="300" height="300" />
+
+
+	
 ### For masked-LM model (can be fine-tunned to any down-stream task)
 	from transformers import AutoTokenizer, AutoModel
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT")
