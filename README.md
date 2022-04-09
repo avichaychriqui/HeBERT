@@ -1,5 +1,5 @@
 ﻿# HeBERT: Pre-trained BERT for Polarity Analysis and Emotion Recognition
-<img align="right" src="https://github.com/avichaychriqui/HeBERT/blob/main/examples/heBERT_logo.png?raw=true" width="250">
+<img align="right" src="https://github.com/avichaychriqui/HeBERT/blob/main/heBERT_logo.png?raw=true" width="250">
  
 HeBERT is a Hebrew pretrained language model. It is based on [Google's BERT](https://arxiv.org/abs/1810.04805) architecture and it is BERT-Base config. <br>
 
@@ -13,13 +13,21 @@ We evaluated the model on downstream tasks: emotions recognition and sentiment a
 
 ## Emotion UGC Data Description
 Our UGC data include comments posted on news articles collected from 3 major Israeli news sites, between January 2020 to August 2020. The total size of the data is ~150 MB, including over 7 millions words and 350K sentences.
-~2000 sentences were annotated by crowd members (3-10 annotators per sentence) for overall sentiment (polarity) and [eight emotions](https://en.wikipedia.org/wiki/Robert_Plutchik#Plutchik's_wheel_of_emotions): anger, disgust, expectation , fear, happy, sadness, surprise and trust. 
+~4000 sentences were annotated by crowd members (3-10 annotators per sentence) for overall sentiment (polarity) and [eight emotions](https://en.wikipedia.org/wiki/Robert_Plutchik#Plutchik's_wheel_of_emotions): anger, disgust, expectation , fear, happy, sadness, surprise and trust. 
+	
+For our robustness analyses, we also collected and annotated two additional datasets. The first contains a random set of comments taken from our in-domain dataset (that is, comments that were posted on Covid-related news articles). The second is a random set of comments taken from an out-of-domain dataset containing comments that were posted in response to non-Covid-related articles from the same news sites. An additional explanation can be found in section 5.1 of our article. 
 The percentage of sentences in which each emotion appeared is found in the table below.
 
-|       | anger | disgust | expectation | fear | happy | sadness | surprise | trust | sentiment |
-|------:|------:|--------:|------------:|-----:|------:|--------:|---------:|------:|-----------|
-| **ratio** |  0.78 |    0.83 |        0.58 | 0.45 |  0.12 |    0.59 |     0.17 |  0.11 | 0.25      |
+|       	   			   | anger | disgust | expectation | fear | happy | sadness | surprise | trust | sentiment |
+|------:	   			   |------:|--------:|------------:|-----:|------:|--------:|---------:|------:|-----------|
+| **Main Dataset** 			   |  0.78 |    0.83 |        0.58 | 0.45 |  0.12 |    0.59 |     0.17 |  0.11 | 0.25      |
+| **Random Comments from the Corpus**	   |  0.79 |	0.87 |        0.46 | 0.17 |  0.03 |    0.30 |     0.00 |  0.03 | 0.02      |
+| **Out of Domain**	   |  0.76 |	0.89 |        0.62 | 0.10 |  0.08 |    0.36 |     0.02 |  0.13 | 0.12      |
 
+	
+All the datasets can be found on "data.zip" in this GIT. <br>
+If you use our datasets please cite us (can be found below).
+	
 ## Performance
 ### Emotion Recognition
 | emotion     | f1-score | precision | recall   |
@@ -34,7 +42,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 |    surprise | 0.40 |  0.44 | 0.37 |
 |       trust | 0.83 |  0.86 | 0.80 |
 
-*The above metrics for positive class (meaning, the emotion is reflected in text).*
+*The above metrics for positive class (meaning, the emotion is reflected in text) for the main dataset*
 
 ### Sentiment (Polarity) Analysis
 |              | precision | recall | f1-score |
@@ -62,7 +70,7 @@ HebEMO_model.hebemo(input_path = 'examples/text_example.txt')
 
 hebEMO_df = HebEMO_model.hebemo(text='החיים יפים ומאושרים', plot=True)
 ```
-<img src="https://github.com/avichaychriqui/HeBERT/blob/main/examples/hebEMO1.png?raw=true" width="300" height="300" />
+<img src="https://github.com/avichaychriqui/HeBERT/blob/main/hebEMO1.png?raw=true" width="300" height="300" />
 
 
 	
@@ -109,10 +117,6 @@ hebEMO_df = HebEMO_model.hebemo(text='החיים יפים ומאושרים', plo
 
 	
 Our model is also available on AWS! for more information visit [AWS' git](https://github.com/aws-samples/aws-lambda-docker-serverless-inference/tree/main/hebert-sentiment-analysis-inference-docker-lambda)
-
-## Stay tuned!
-We are still working on our model and will edit this page as we progress. <br>
-Note that we have released only sentiment analysis (polarity) at this point, emotion detection will be released later on.
 
 ## Contact us
 [Avichay Chriqui](mailto:avichayc@mail.tau.ac.il) <br>
