@@ -25,7 +25,7 @@ The percentage of sentences in which each emotion appeared is found in the table
 | **Out of Domain**	   |  0.76 |	0.89 |        0.62 | 0.10 |  0.08 |    0.36 |     0.02 |  0.13 | 0.12      |
 
 	
-All the datasets can be found on "data.zip" in this GIT. <br>
+All the datasets can be found on "data.zip" in this git (where each row stands for a different annotator of a sentence). The agreed score which we used to train and test our models, can be found in the column 'agreed score' (if we found sufficient agreement). See our article for more details on the annotation process. <br>
 If you use our datasets please cite us (can be found below).
 	
 ## Performance
