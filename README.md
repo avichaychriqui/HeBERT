@@ -1,19 +1,19 @@
 ﻿# HeBERT: Pre-trained BERT for Polarity Analysis and Emotion Recognition
 <img align="right" src="https://github.com/avichaychriqui/HeBERT/blob/main/heBERT_logo.png?raw=true" width="250">
  
-HeBERT is a Hebrew pretrained language model. It is based on [Google's BERT](https://arxiv.org/abs/1810.04805) architecture and it is BERT-Base config. <br>
+HeBERT is a Hebrew pre-trained language model. It is based on [Google's BERT](https://arxiv.org/abs/1810.04805) architecture and it is a BERT-Base config. <br>
 
-HeBert was trained on three dataset: 
-1. A Hebrew version of [OSCAR](https://oscar-corpus.com/): ~9.8 GB of data, including 1 billion words and over 20.8 millions sentences. 
-2. A Hebrew dump of [Wikipedia](https://dumps.wikimedia.org/): ~650 MB of data, including over 63 millions words and 3.8 millions sentences
+HeBERT was trained on three dataset: 
+1. A Hebrew version of [OSCAR](https://oscar-corpus.com/): ~9.8 GB of data, including 1 billion words and over 20.8 million sentences. 
+2. A Hebrew dump of [Wikipedia](https://dumps.wikimedia.org/): ~650 MB of data, including over 63 million words and 3.8 million sentences
 3. Emotion User Generated Content (UGC) data that was collected for the purpose of this study (described below).
 <br>
 <div>
 We evaluated the model on downstream tasks: emotions recognition and sentiment analysis. 
 
 ## Emotion UGC Data Description
-Our UGC data include comments posted on news articles collected from 3 major Israeli news sites, between January 2020 to August 2020. The total size of the data is ~150 MB, including over 7 millions words and 350K sentences.
-~4000 sentences were annotated by crowd members (3-10 annotators per sentence) for overall sentiment (polarity) and [eight emotions](https://en.wikipedia.org/wiki/Robert_Plutchik#Plutchik's_wheel_of_emotions): anger, disgust, expectation , fear, happy, sadness, surprise and trust. 
+Our UGC data include comments posted on news articles collected from 3 major Israeli news sites, between January 2020 to August 2020. The total size of the data is ~150 MB, including over 7 million words and 350K sentences.
+~4000 sentences were annotated by crowd members (3-10 annotators per sentence) for overall sentiment (polarity) and [eight emotions](https://en.wikipedia.org/wiki/Robert_Plutchik#Plutchik's_wheel_of_emotions): anger, disgust, expectation , fear, joy, sadness, surprise and trust. 
 	
 For our robustness analyses, we also collected and annotated two additional datasets. The first contains a random set of comments taken from our in-domain dataset (that is, comments that were posted on Covid-related news articles). The second is a random set of comments taken from an out-of-domain dataset containing comments that were posted in response to non-Covid-related articles from the same news sites. An additional explanation can be found in section 5.1 of our article. 
 The percentage of sentences in which each emotion appeared is found in the table below.
