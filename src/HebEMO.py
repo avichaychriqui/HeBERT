@@ -1,9 +1,9 @@
 class HebEMO:
     def __init__(self, device=-1, emotions = ['anticipation', 'joy', 'trust', 'fear', 'surprise', 'anger',
-      'sadness', 'disgust']):
+      'sadness', 'disgust'], batch_size=1):
         from transformers import pipeline
         from tqdm import tqdm
-        
+        self.batch_size = batch_size
         self.device = device
         self.emotions = emotions
         self.hebemo_models = {}
@@ -45,7 +45,7 @@ class HebEMO:
         # run hebEMO
         hebEMO_df = pd.DataFrame(txt) 
         for emo in tqdm(self.emotions): 
-            x = self.hebemo_models[emo](txt)
+            x = self.hebemo_models[emo](txt, batch_size=self.batch_size)
             hebEMO_df = hebEMO_df.join(pd.DataFrame(x).rename(columns = {'label': emo, 'score':'confidence_'+emo}))
             del x
             torch.cuda.empty_cache()
