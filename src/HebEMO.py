@@ -1,13 +1,17 @@
 class HebEMO:
     def __init__(self, device=-1, emotions = ['anticipation', 'joy', 'trust', 'fear', 'surprise', 'anger',
-      'sadness', 'disgust'], batch_size=1):
+      'sadness', 'disgust']):
         from transformers import pipeline
         from tqdm import tqdm
-        self.batch_size = batch_size
         self.device = device
-        self.emotions = emotions
+        if type(emotions) == str:
+            self.emotions = [emotions]
+        elif type(emotions) != list:
+          raise ValueError('emotions should be emotion as a text or list of emotions.')
+        else:
+            self.emotions = emotions
         self.hebemo_models = {}
-        for emo in tqdm(emotions): 
+        for emo in tqdm(self.emotions): 
             self.hebemo_models[emo] = pipeline(
                 "sentiment-analysis",
                 model="avichr/hebEMO_"+emo,
@@ -15,7 +19,7 @@ class HebEMO:
                 device = self.device #-1 run on CPU, else - device ID
             )
     
-    def hebemo(self, text = None, input_path=False, save_results=False, read_lines=False, plot=False):
+    def hebemo(self, text = None, input_path=False, save_results=False, read_lines=False, plot=False, batch_size=32, max_length = 512, truncation=True):
         '''
         text (str): a text or list of text to analyze
         input_path(str): the path to the text file (txt file, each row for different instance)
@@ -45,7 +49,7 @@ class HebEMO:
         # run hebEMO
         hebEMO_df = pd.DataFrame(txt) 
         for emo in tqdm(self.emotions): 
-            x = self.hebemo_models[emo](txt, batch_size=self.batch_size)
+            x = self.hebemo_models[emo](txt, truncation=truncation, max_length=max_length, batch_size=batch_size)
             hebEMO_df = hebEMO_df.join(pd.DataFrame(x).rename(columns = {'label': emo, 'score':'confidence_'+emo}))
             del x
             torch.cuda.empty_cache()
