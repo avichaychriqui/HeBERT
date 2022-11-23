@@ -1,0 +1,6 @@
+def run_me():
+  !pip install -r HeBERT/requirements.txt &> /dev/nullc
+  from HeBERT.src.HebEMO import HebEMO
+  HebEMO_model = HebEMO()
+  !streamlit run HebEMO_demo/colab_app.py &>/content/logs.txt &
+  !npx localtunnel --port 8501
