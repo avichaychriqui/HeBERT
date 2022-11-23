@@ -73,10 +73,3 @@ class HebEMO:
             return (hebEMO_df)
 
         
-def run_me_for_interactive_usage():
-  # for using streamlit in colab
-  # check https://colab.research.google.com/drive/1Jw3gOWjwVMcZslu-ttXoNeD17lms1-ff?usp=sharing#scrollTo=EeEPkdDo3AQf for demo
-  from HeBERT.src.HebEMO import HebEMO
-  HebEMO_model = HebEMO()
-  !streamlit run HebEMO_demo/colab_app.py &>/content/logs.txt &
-  !npx localtunnel --port 8501
