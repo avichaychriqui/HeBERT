@@ -1,3 +1,4 @@
-transformers
+transformers==4.14.1
+pyplutchik==0.0.7
 torch
-pyplutchik
+streamlit
