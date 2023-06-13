@@ -1,4 +1,4 @@
-from HeBERT.src.HebEMO import HebEMO
+from HebEMO import HebEMO
 from transformers import pipeline
 import streamlit as st
 from io import StringIO 
