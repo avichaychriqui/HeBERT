@@ -1,6 +1,3 @@
-%%writefile app.py
-
-
 from HeBERT.src.HebEMO import HebEMO
 from transformers import pipeline
 import streamlit as st
