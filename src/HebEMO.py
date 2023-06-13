@@ -12,9 +12,13 @@ class HebEMO:
             self.emotions = emotions
         self.hebemo_models = {}
         for emo in tqdm(self.emotions): 
+            if emo == 'sentiment':
+                model_name = 'heBERT_sentiment_analysis'
+            else:
+                model_name = "avichr/hebEMO_"+emo
             self.hebemo_models[emo] = pipeline(
                 "sentiment-analysis",
-                model="avichr/hebEMO_"+emo,
+                model=model_name,
                 tokenizer="avichr/heBERT",
                 device = self.device #-1 run on CPU, else - device ID
             )
