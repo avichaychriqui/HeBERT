@@ -1,6 +1,6 @@
 class HebEMO:
-    def __init__(self, device=-1, emotions = ['anticipation', 'joy', 'trust', 'fear', 'surprise', 'anger',
-      'sadness', 'disgust']):
+    def __init__(self, emotions = ['anticipation', 'joy', 'trust', 'fear', 'surprise', 'anger',
+      'sadness', 'disgust'], device=0):
         from transformers import pipeline
         from tqdm import tqdm
         self.device = device
