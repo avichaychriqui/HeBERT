@@ -74,7 +74,8 @@ hebEMO_df = HebEMO_model.hebemo(text='החיים יפים ומאושרים', plo
 
 
 	
-### For masked-LM model (can be fine-tunned to any down-stream task)
+### For masked-LM model (can be [fine-tunned to any down-stream task](https://colab.research.google.com/drive/1_t-9ALMQ6WqVExJT2NEdR7x67CDaE1FP?usp=sharing))
+
 	from transformers import AutoTokenizer, AutoModel
 	tokenizer = AutoTokenizer.from_pretrained("avichr/heBERT")
 	model = AutoModel.from_pretrained("avichr/heBERT")
