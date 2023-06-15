@@ -118,6 +118,24 @@ hebEMO_df = HebEMO_model.hebemo(text='החיים יפים ומאושרים', plo
 	
 Our model is also available on AWS! for more information visit [AWS' git](https://github.com/aws-samples/aws-lambda-docker-serverless-inference/tree/main/hebert-sentiment-analysis-inference-docker-lambda)
 
+## Named-entity recognition (NER)
+The ability of the model to classify named entities in text, such as persons' names, organizations, and locations; tested on a labeled dataset from [Ben Mordecai and M Elhadad (2005)](https://www.cs.bgu.ac.il/~elhadad/nlpproj/naama/), and evaluated with F1-score.
+[Colab notebook](https://colab.research.google.com/drive/18Uhq3HMxudo1XWaYZ14GI-_Op5Ds9EGo?usp=sharing)
+
+### How to use
+```
+	from transformers import pipeline
+	
+	# how to use?
+	NER = pipeline(
+	    "token-classification",
+	    model="avichr/heBERT_NER",
+	    tokenizer="avichr/heBERT_NER",
+	)
+	NER('דויד לומד באוניברסיטה העברית שבירושלים')
+```
+
+
 ## Contact us
 [Avichay Chriqui](mailto:avichayc@mail.tau.ac.il) <br>
 [Inbal yahav](mailto:inbalyahav@tauex.tau.ac.il) <br>
